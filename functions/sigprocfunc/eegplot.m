@@ -484,13 +484,7 @@ if ~ischar(data) % If NOT a 'noui' call or a callback from uicontrols
 
   % Drawing axis
   % --------------- 
-  % Hecho por mi, para poder visualizar los canales con sus etiquetas en vez de numeros de indice
-  channel_labels = strings(1, EEG.nbchan)';
-  for index = 1:EEG.nbchan
-       channel_labels(index) = EEG.chanlocs(index).labels;
-  end
-
-  YLabels = channel_labels  % num2str((1:g.chans)');  % Use numbers as default
+  YLabels = num2str((1:g.chans)');  % Use numbers as default
   YLabels = flipud(char(YLabels,' '));
   ax1 = axes('Position',DEFAULT_AXES_POSITION,...
       'userdata', data, ...% store the data here
