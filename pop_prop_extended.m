@@ -154,8 +154,8 @@ fh = figure('name', [basename ' - pop_prop_extended()'],...
     'Visible', 'off', ...
     'ToolBar', 'none',...
     'MenuBar','none');
-pos = [0 38 1366 701];
-set(fh,'Position', pos) 	% [pos(1)-1200+pos(3) pos(2)-700+pos(4) 1200 700]); % ESTO LO CORREGI YO PARA MI PANTALLA
+pos = [0 38 1366 701]; % > > > > > ESTO LO MODIFIQUE YO < < < < < ESTO LO CORREGI YO PARA MI PANTALLA
+set(fh,'Position', pos); % Esto lo modifique yo 	% set(fh,'Position', [pos(1)-1200+pos(3) pos(2)-700+pos(4) 1200 700]); <-- Esto estaba antes % > > > > > ESTO LO MODIFIQUE YO < < < < <
 
 % initialize ica data
 if ~typecomp
